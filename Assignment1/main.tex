@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Example: Project Report
+%
+% Source: http://www.howtotex.com
+%
+% Feel free to distribute this example, but please keep the referral
+% to howtotex.com
+% Date: March 2011 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edit the title below to update the display in My Documents
+%\title{Project Report}
+%
+%%% Preamble
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}											% No page header
+\fancyfoot[L]{}											% Empty 
+\fancyfoot[C]{}											% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\title{
+		%\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{ASSIGNMENT 1} \\ [25pt]
+		\horrule{0.5pt} \\[0.4cm]
+		\huge REPORT ON COVID-19 DATA ANALYSIS \\
+		\horrule{2pt} \\[0.5cm]
+}
+\date{}
+
+
+%%% Begin document
+\begin{document}
+\maketitle
+\section{Analysis and conclusion }
+This report suggests that we have a district,state wise analysis for cases,z-scores,standard deviations,means for every district according to its neighbors and state.A lot of data pre-processing in order to match the district names as  Covid-19 portal's districts is required. After going through the data,some districts are added  manually as per their COVID-19 portal district names. Some smaller districts are merged into a larger one,plus the state which have unknown entries are combined  and named as 'unknown' with 'state name'.As there are many states which do not have their districts mentioned in the file of COVID-19 portal file,the cases are considered for them are quite large in numbers because the cases are calculated cumulatively for the whole state.The result would have been more accurate if we would have district wise names and information particularly. 
+\paragraph{}
+From the analysis of the COVID data in the span of March 15,2020 to September 5,2020, we can conclude that the hike in the number of cases is typically observed from the week 7.Prominently in the week 1-6, i.e. from March 15,2020 to April 26,2020 there are only cases in Delhi,Chandigarh and Telangana.
+\paragraph{}
+We can observe from the given data that the population of Assam(nearly 3.4 crores) is approximately double as that of Delhi(nearly 1.9 crore). Still the cases in Delhi(1.8 lakhs) are nearly same or to be precised, greater than Assam (1.2 lakhs). Similar is the case with Bangalore urban(1.4 lakhs). Hence we  can conclude that the metropolitan cities have wider spread of COVID. 
+\paragraph{}
+The top 5 hot-spot districts according to the neighborhood z-score for the analysis time span are Bangalore(urban), Assam, Bhopal, Surat, Delhi. Also the top 5 cold-spot according to neighborhood z-score are Upper Dibang Valley, Kairakal, Unokoti(Tripura), Mahe, Sheohar. The important result that can be outlined is that ,north-eastern region of India itself contains both the hot spot(Assam) cold spots(Dibang Valley(Arunachal Pradesh),Unokoti(Tripura)).  
+\paragraph{}
+The top 5 hot-spot districts according to the state z-score for whole time period of March 15 to September 5 ,2020 are Puducherry, Bangalore(urban), Chennai, Raipur, Patna. Also the top 5 cold-spot according to state z-score are Diu, Krishna(Andra Pradesh), Lahaul and Spiti, Vizianagaram, Wayanad.
+
+%%% End document
+\end{document}
