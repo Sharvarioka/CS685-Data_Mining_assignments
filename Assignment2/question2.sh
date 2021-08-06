@@ -1,0 +1,1 @@
+python3 que2.py
